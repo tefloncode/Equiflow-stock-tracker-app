@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { useRouter } from "next/navigation"
+import { Button } from "./ui/button";
 import { LogOut } from "lucide-react";
 import NavItem from "./NavItem";
 
@@ -26,7 +27,7 @@ const UserDropdown = () => {
   return (
     <DropdownMenu>
     <DropdownMenuTrigger asChild>
-        <button className="flex items-center gap-3 text-gray-4 hover:text-yellow-500">
+        <Button variant="ghost" className="flex items-center gap-3 text-gray-400 hover:text-yellow-500">
           <Avatar className="h-8 w-8">
          <AvatarImage src="https://lh3.googleusercontent.com/a/ACg8ocKWVAvwWNjeYsZeO6nTPtXKkQhY4TC4T2_tAYBf04Jg5KbnOUbO=s288-c-no" />
         <AvatarFallback className="bg-yellow-500 text-yellow-900 text-sm font-bold">
@@ -38,7 +39,7 @@ const UserDropdown = () => {
             {user.name}
           </span>
         </div>
-        </button>
+        </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent className="text-gray-400">
       <DropdownMenuLabel>
